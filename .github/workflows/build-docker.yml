@@ -59,6 +59,7 @@ jobs:
               github.ref == format('refs/heads/{0}', 'master') }}
 
       - name: Build and push Docker image
+        id: build
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -72,4 +73,4 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Image digest
-        run: echo "Image built with digest ${{ steps.meta.outputs.digest }}"
+        run: echo "Image built with digest ${{ steps.build.outputs.digest }}"
