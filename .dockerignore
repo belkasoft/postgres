@@ -1,0 +1,41 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+.git-blame-ignore-revs
+
+# GitHub files
+.github
+
+# CI files
+.cirrus.star
+.cirrus.tasks.yml
+.cirrus.yml
+
+# Documentation
+doc/
+*.md
+
+# Build artifacts
+*.o
+*.so
+*.a
+*.dylib
+
+# Source files (not needed for Docker image)
+src/
+contrib/
+config/
+
+# Editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.dir-locals.el
+.editorconfig
+
+# Temporary files
+tmp/
+temp/
