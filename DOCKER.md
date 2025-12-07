@@ -17,8 +17,7 @@ docker pull ghcr.io/belkasoft/postgres:latest
 ### Tags
 
 - `latest` - Latest build with PostgreSQL 16
-- `pg14`, `pg15`, `pg16` - Specific PostgreSQL version
-- `pg{version}-{sha}` - Version with specific commit SHA
+- `16` - PostgreSQL 16
 - Version tags (e.g., `v1.0.0`) - Release versions
 
 ## Usage
@@ -89,11 +88,7 @@ docker run -d \
 To build the image locally:
 
 ```bash
-# Build with PostgreSQL 16 (default)
 docker build -t postgres-ttl:latest .
-
-# Build with specific PostgreSQL version
-docker build --build-arg PG_VERSION=15 -t postgres-ttl:pg15 .
 ```
 
 ## References

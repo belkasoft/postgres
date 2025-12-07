@@ -24,10 +24,6 @@ jobs:
       contents: read
       packages: write
 
-    strategy:
-      matrix:
-        pg_version: [14, 15, 16]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -53,10 +49,8 @@ jobs:
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
-            type=raw,value=pg${{ matrix.pg_version }}
-            type=raw,value=pg${{ matrix.pg_version }}-{{sha}}
-            type=raw,value=latest,enable=${{ matrix.pg_version == 16 && 
-              (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') }}
+            type=raw,value=16
+            type=raw,value=latest
 
       - name: Build and push Docker image
         id: build
@@ -67,8 +61,6 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            PG_VERSION=${{ matrix.pg_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
