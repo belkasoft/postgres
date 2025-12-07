@@ -98,7 +98,8 @@ docker build --build-arg PG_VERSION=15 -t postgres-ttl:pg15 .
 
 ## References
 
-- [pg_ttl_index Extension](https://github.com/ibrahimkarimeddin/postgres-extensions-pg_ttl)
+- [pg_ttl_index Extension on PGXN](https://pgxn.org/dist/pg_ttl_index/)
+- [PostgreSQL Extension Network (PGXN)](https://pgxn.org/)
 - [PostgreSQL Official Docker Image](https://hub.docker.com/_/postgres)
 
 ## License
