@@ -56,7 +56,7 @@ jobs:
             type=raw,value=pg${{ matrix.pg_version }}
             type=raw,value=pg${{ matrix.pg_version }}-{{sha}}
             type=raw,value=latest,enable=${{ matrix.pg_version == 16 && 
-              github.ref == format('refs/heads/{0}', 'master') }}
+              (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') }}
 
       - name: Build and push Docker image
         id: build
