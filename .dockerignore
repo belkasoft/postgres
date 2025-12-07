@@ -15,7 +15,6 @@
 # Documentation
 doc/
 *.md
-!DOCKER.md
 
 # Build artifacts
 *.o
