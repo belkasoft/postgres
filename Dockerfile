@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && pgxn install pg_ttl_index \
     && echo "shared_preload_libraries = 'pg_ttl_index'" >> /usr/share/postgresql/postgresql.conf.sample \
     && apt-get purge -y --auto-remove \
+        pgxnclient \
         build-essential \
         postgresql-server-dev-"${PG_MAJOR}" \
     && apt-get clean \
