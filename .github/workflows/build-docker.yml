@@ -1,16 +1,6 @@
 name: Build and Push PostgreSQL Docker Image with pg_ttl_index
 
 on:
-  push:
-    branches:
-      - main
-      - master
-    tags:
-      - 'v*'
-  pull_request:
-    branches:
-      - main
-      - master
   workflow_dispatch:
 
 env:
