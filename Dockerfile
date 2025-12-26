@@ -18,7 +18,7 @@ RUN set -eux; \
 WORKDIR /tmp/ext
 
 RUN set -eux; \
-    git clone --depth 1 --branch "fix-ttl-worker-main" "https://github.com/belkasoft/postgres-extensions-pg_ttl" .; \
+    git clone --depth 1 --branch "main" "https://github.com/belkasoft/postgres-extensions-pg_ttl" .; \
     make clean; \
 	make; \
     make install
