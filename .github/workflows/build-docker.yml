@@ -41,6 +41,7 @@ jobs:
             type=semver,pattern={{major}}
             type=raw,value=16
             type=raw,value=latest
+            type=raw,value=build-${{ github.run_number }}
 
       - name: Build and push Docker image
         id: build

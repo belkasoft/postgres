@@ -18,7 +18,14 @@ docker pull ghcr.io/belkasoft/postgres:latest
 
 - `latest` - Latest build with PostgreSQL 16
 - `16` - PostgreSQL 16
+- `build-N` - Build number tags (e.g., `build-1`, `build-2`) - incremented on each build
 - Version tags (e.g., `v1.0.0`) - Release versions
+
+You can pull a specific build using its build number:
+
+```bash
+docker pull ghcr.io/belkasoft/postgres:build-5
+```
 
 ## Usage
 
